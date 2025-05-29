@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Arno VS</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./src/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./src/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../src/images/favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <h1 class="nav__title">Portfolio Arno Van Steenbergen</h1>
+        <button class="nav__theme js__theme">
+          <svg
+            class="theme__moon js__moon"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.553 19.2499C13.7848 19.2499 16.7487 17.4781 18.2923 14.6247C18.4201 14.3903 18.3978 14.1037 18.2395 13.8917C18.0812 13.6796 17.8083 13.5777 17.5535 13.6357C17.0259 13.7509 16.4941 13.808 15.9706 13.808C11.8639 13.808 8.52147 10.4509 8.52147 6.32425C8.52147 5.07847 8.83395 3.84584 9.4226 2.75507C9.5504 2.52066 9.52814 2.23408 9.36984 2.02203C9.21154 1.80998 8.93863 1.70809 8.68388 1.76609C4.66543 2.63995 1.75 6.27124 1.75 10.4062C1.75 15.2832 5.69838 19.25 10.5529 19.25L10.553 19.2499Z"
+            />
+          </svg>
+          <svg
+            class="theme__sun js__sun"
+            width="19"
+            height="19"
+            viewBox="0 0 19 19"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.4583 9.49967C13.4583 11.6862 11.6862 13.4583 9.49967 13.4583C7.31355 13.4583 5.54163 11.6862 5.54163 9.49967C5.54163 7.31355 7.3137 5.54163 9.49967 5.54163C11.6862 5.54163 13.4583 7.3137 13.4583 9.49967"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.3 1.74415C11.3 2.70751 10.5192 3.48904 9.55506 3.48904C8.5917 3.48904 7.81091 2.70751 7.81091 1.74415C7.81091 0.780788 8.5917 0 9.55506 0C10.5192 0 11.3 0.780788 11.3 1.74415"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.28875 2.74322C5.96933 3.42455 5.96933 4.52893 5.28875 5.21019C4.60743 5.89152 3.50305 5.89152 2.82178 5.21019C2.14046 4.52887 2.14046 3.42449 2.82178 2.74322C3.50311 2.06264 4.60748 2.06264 5.28875 2.74322Z"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.74415 7.7002C2.70751 7.7002 3.48904 8.48098 3.48904 9.44508C3.48904 10.4084 2.70751 11.1892 1.74415 11.1892C0.780788 11.1892 0 10.4084 0 9.44508C0 8.48098 0.780788 7.7002 1.74415 7.7002"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M2.74322 13.7112C3.42455 13.0307 4.52893 13.0307 5.21019 13.7112C5.89151 14.3926 5.89151 15.4969 5.21019 16.1782C4.52887 16.8595 3.42449 16.8595 2.74322 16.1782C2.06264 15.4969 2.06264 14.3925 2.74322 13.7112Z"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.1892 17.2559C11.1892 18.2192 10.4084 19 9.44508 19C8.48098 19 7.7002 18.2192 7.7002 17.2559C7.7002 16.2925 8.48098 15.511 9.44508 15.511C10.4084 15.511 11.1892 16.2925 11.1892 17.2559"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.7111 16.2568C13.0305 15.5754 13.0305 14.4711 13.7111 13.7898C14.3924 13.1085 15.4968 13.1085 16.1781 13.7898C16.8594 14.4711 16.8594 15.5755 16.1781 16.2568C15.4968 16.9374 14.3924 16.9374 13.7111 16.2568Z"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17.2559 11.2999C16.2925 11.2999 15.511 10.5192 15.511 9.55506C15.511 8.5917 16.2925 7.81091 17.2559 7.81091C18.2192 7.81091 19 8.5917 19 9.55506C19 10.5192 18.2192 11.2999 17.2559 11.2999Z"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16.2568 5.28887C15.5754 5.96945 14.4711 5.96945 13.7898 5.28887C13.1085 4.60755 13.1085 3.50317 13.7898 2.82191C14.4711 2.14058 15.5755 2.14058 16.2568 2.82191C16.9373 3.50323 16.9373 4.60761 16.2568 5.28887Z"
+            />
+          </svg>
+        </button>
+        <ul class="nav__list">
+          <li class="list__item">
+            <a href="./#home">Home</a>
+          </li>
+          <li class="list__item">
+            <a href="./#projects">Projects</a>
+          </li>
+          <li class="list__item">
+            <a href="./#about">About</a>
+          </li>
+          <li class="list__item">
+            <a href="./#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="section-one" id="home">
+        <div class="home__content">
+          <div class="home__text">
+            <h1 class="home__title">
+              Hi, I'm <span class="highlight">Arno</span>
+            </h1>
+            <h2 class="home__subtitle">Full-Stack Developer</h2>
+            <p class="home__description">
+              I build robust back-end systems and great front-end experiences.
+              Currently specializing in JavaScript technologies and cloud
+              development.
+            </p>
+            <div class="home__cta">
+              <a href="#projects" class="cta-button">View My Work</a>
+              <a href="#contact" class="cta-button secondary">Contact Me</a>
+            </div>
+          </div>
+          <div class="home__image">
+            <div class="image-wrapper">
+              <img
+                src="./src/images/placeholder.jpeg"
+                alt="Arno Vansteenbergen - Full-Stack Developer"
+                class="profile-image"
+              />
+              <svg
+                class="profile-mask"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <clipPath id="profile-clip">
+                  <circle cx="50" cy="50" r="40" />
+                </clipPath>
+              </svg>
+              <div class="image-border"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-two" id="projects">
+        <h2>Projects:</h2>
+        <div class="project-container">
+          <article class="project__card">
+            <img
+              src="./src/images/bestof.png"
+              alt="Screenshot of the home page of Best Of 2024"
+            />
+            <h2>Best Of 2024</h2>
+            <p>
+              This was a class where we focused on work environment teaching.
+            </p>
+            <button popovertarget="bestof-popover" class="read-more">
+              Read More
+            </button>
+
+            <div id="bestof-popover" popover>
+              <h4>Best Of 2024</h4>
+              <img
+                src="./src/images/bestof.png"
+                alt=""
+                style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
+              />
+              <p>
+                This was a class where we focused on work environment teaching.
+              </p>
+              <a
+                href="https://github.com/Suka-Baguette/BestOf2024"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+          </article>
+
+          <article class="project__card">
+            <img
+              src="./src/images/taskManager.png"
+              alt="Screenshot of the home page of my Task Manager"
+            />
+            <h2>Task Manager</h2>
+            <p>
+              This was my exam project where i learned a lot of back-end
+              development skills.
+            </p>
+            <button popovertarget="taskmanager-popover" class="read-more">
+              Read More
+            </button>
+
+            <div id="taskmanager-popover" popover>
+              <h4>Best Of 2024</h4>
+              <img
+                src="./src/images/bestof.png"
+                alt=""
+                style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
+              />
+              <p>
+                bla bla bla
+              </p>
+              <a
+                href="https://github.com/Suka-Baguette/BestOf2024"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+          </article>
+
+          <article class="project__card">
+            <img
+              src="./src/images/stam.png"
+              alt="Screenshot of the home page of the Stam Museum"
+            />
+            <h2>STAM Museum</h2>
+            <p>
+              In this excercise we had to focus on styling and responsivness.
+            </p>
+            <button popovertarget="stam-popover" class="read-more">
+              Read More
+            </button>
+
+            <div id="stam-popover" popover>
+              <h4>Best Of 2024</h4>
+              <img
+                src="./src/images/bestof.png"
+                alt=""
+                style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
+              />
+              <p>
+                This was a class where we focused on work environment teaching.
+              </p>
+              <a
+                href="https://github.com/Suka-Baguette/BestOf2024"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+          </article>
+
+          <article class="project__card">
+            <img
+              src="./src/images/startToCode.png"
+              alt="Screenshot of the home page of Best Of 2024"
+            />
+            <h2>Start to code</h2>
+            <p>
+              This is a little exercise i made with a classmate. It's a tutorial
+              site for beginners.
+            </p>
+            <button popovertarget="starttocode-popover" class="read-more">
+              Read More
+            </button>
+
+            <div id="starttocode-popover" popover>
+              <h4>Best Of 2024</h4>
+              <img
+                src="./src/images/bestof.png"
+                alt=""
+                style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
+              />
+              <p>
+                This was a class where we focused on work environment teaching.
+              </p>
+              <a
+                href="https://github.com/Suka-Baguette/BestOf2024"
+                target="_blank"
+                >View on GitHub</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-three" id="about">
+        <div class="about__wrapper">
+          <div class="about__info">
+            <h2>About me</h2>
+            <p>
+              I'm Arno and I'm a 21-year-old full-stack developer who studied at
+              Artvelde Hogeschool. I got my degree for a Graduaat Programming in
+              Ghent, Belgium. I've been programming for about 5 years now and
+              I'm specialized in back-end programming with Node.js. I also have
+              a lot more knowledge in different languages and frameworks.
+            </p>
+          </div>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <div class="about__skills">
+            <h3>My Skills:</h3>
+            <div class="skills-wrapper">
+              <div class="skill">
+                <p>HTML</p>
+                <div class="blocks">
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                </div>
+                <button popovertarget="html-popover" class="read-more">
+                  Read More
+                </button>
+                <div id="html-popover" popover>
+                  <h4>HTML Expertise</h4>
+                  <p>
+                    I write semantic, accessible HTML5 markup. Experience with:
+                  </p>
+                  <ul>
+                    <li>SEO optimization</li>
+                    <li>Web Components</li>
+                    <li>Forms & Accessibility (ARIA)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="skill">
+                <p>CSS</p>
+                <div class="blocks">
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                </div>
+                <button popovertarget="css-popover" class="read-more">
+                  Read More
+                </button>
+                <div id="css-popover" popover>
+                  <h4>CSS Mastery</h4>
+                  <p>Advanced CSS3 features:</p>
+                  <ul>
+                    <li>Flexbox/Grid layouts</li>
+                    <li>Animations & Transitions</li>
+                    <li>Responsive Design (Mobile-first)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="skill">
+                <p>JavaScript</p>
+                <div class="blocks">
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                  <div class="block"></div>
+                </div>
+                <button popovertarget="js-popover" class="read-more">
+                  Read More
+                </button>
+                <div id="js-popover" popover>
+                  <h4>JavaScript Skills</h4>
+                  <p>Proficient in modern JS:</p>
+                  <ul>
+                    <li>ES6+ (Async/Await, Modules)</li>
+                    <li>DOM Manipulation</li>
+                    <li>API Integration (Fetch)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-four" id="contact">
+        <article>
+          <h2>Contact</h2>
+          <ul>
+            <li>Adress: voorbeeldstraat 69, 9000 Ghent</li>
+            <li>Phone Nr: 04.69/42.04.20</li>
+            <li>Email: arnovans1@arteveldehs.be</li>
+            <li><a href="https://github.com/Suka-Baguette">Github Page</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
