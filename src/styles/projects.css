@@ -1,0 +1,132 @@
+/* Projects Section */
+.section-two {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+
+  & .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  & .project__card {
+    display: flex;
+    flex-direction: column;
+    background: var(--accent);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    margin-bottom: 2rem;
+    height: 90%;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    & img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    & h2 {
+      margin: 0;
+      color: var(--text);
+      font-size: 1.4rem;
+    }
+
+    & p {
+      margin: 0;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Updated Read More Button */
+    & .read-more {
+      background: none;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 0;
+      margin-top: 1rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &::before {
+        content: "→";
+        color: var(--text);
+        transition: transform 0.3s ease;
+        margin-right: 0.3rem;
+      }
+
+      &:hover {
+        color: var(--border);
+        padding-left: 0.5rem;
+
+        &::before {
+          transform: translateX(0.3rem);
+        }
+      }
+    }
+
+    /* Updated Popover Styling */
+    & [popover] {
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--base);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      max-width: 24rem;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      z-index: 1000;
+
+      & h4 {
+        color: var(--text);
+        margin: 0 0 1rem 0;
+        font-size: 1.2rem;
+      }
+
+      & p,
+      & a {
+        color: var(--text);
+        line-height: 1.6;
+        margin: 0 0 1rem 0;
+      }
+
+      & a {
+        display: inline-block;
+        text-decoration: underline;
+        font-weight: 500;
+      }
+
+      &::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+      }
+    }
+  }
+}
+
+/* Responsive Layout */
+@media (min-width: 640px) {
+  .section-two .project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-two .project-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

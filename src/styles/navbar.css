@@ -1,0 +1,127 @@
+/* Header & navigation styling */
+.header {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1rem;
+  background-color: var(--base);
+  box-shadow: 0 4px 6px var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  & .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    & .nav__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    & .nav__list {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+
+      & .list__item {
+        & a {
+          text-decoration: none;
+          color: var(--text);
+          font-size: 1.2rem;
+          font-weight: 500;
+          position: relative;
+          transition: var(--transition);
+
+          &:hover {
+            color: var(--accent);
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+          }
+
+          &:hover::before {
+            width: 100%;
+            left: 0;
+          }
+        }
+
+        &:has(a:hover) {
+          transform: scale(1.05);
+          transition: var(--transition);
+        }
+      }
+    }
+
+    & .nav__theme {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+
+      & .theme__moon,
+      & .theme__sun {
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: var(--transition);
+      }
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    & {
+      height: auto;
+      padding: 0.5rem;
+    }
+
+    & .nav {
+      flex-direction: column;
+      gap: 1rem;
+
+      & .nav__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    & .nav {
+      & .nav__title {
+        font-size: 1.3rem;
+      }
+
+      & .nav__list {
+        gap: 0.75rem;
+
+        & .list__item a {
+          font-size: 1rem;
+        }
+      }
+
+      & .nav__theme {
+        padding: 0.25rem;
+      }
+    }
+  }
+}
