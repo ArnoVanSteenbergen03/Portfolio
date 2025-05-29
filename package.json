@@ -5,12 +5,13 @@
   "scripts": {
     "start": "mix",
     "watch": "mix watch",
-      "build": "mix --production && copyfiles -u 1 \"src/images/**/*\" dist/images && copyfiles index.html dist"
+    "build": "mix --production && copyfiles -u 1 \"src/images/**/*\" dist/images && copyfiles index.html dist"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "laravel-mix": "^6.0.49",
     "postcss-for": "^2.1.1",
     "webpack-cli": "^6.0.1"
