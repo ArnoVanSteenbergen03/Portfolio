@@ -5,7 +5,7 @@
   "scripts": {
     "start": "mix",
     "watch": "mix watch",
-    "build": "mix --production && cp index.html dist/index.html && cpx \"src/images/**/*\" dist/images"
+      "build": "mix --production && copyfiles -u 1 \"src/images/**/*\" dist/images && copyfiles index.html dist"
   },
   "author": "",
   "license": "ISC",
