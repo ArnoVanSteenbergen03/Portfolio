@@ -1,0 +1,17 @@
+/* Minimal reset and base styles */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: none;
+  color: var(--text, #222);
+  font-family: "Oswald", system-ui, Arial, sans-serif;
+}

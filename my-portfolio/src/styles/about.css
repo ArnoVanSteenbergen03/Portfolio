@@ -1,0 +1,52 @@
+.section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.about {
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(127,161,240,0.08);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about__title {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about__desc {
+  color: var(--text);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.skill {
+  background: var(--selected);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  min-width: 120px;
+  text-align: center;
+  color: var(--text);
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(127,161,240,0.05);
+}
