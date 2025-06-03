@@ -5,7 +5,7 @@ function Projects() {
         <h2 className="projects__title">Projects</h2>
         <div className="projects__grid">
           <div className="project-card">
-            <img src="./images/bestof.png" alt="Best Of 2024" />
+            <img src="./src/assets/images/bestof.png" alt="Best Of 2024" />
             <h3>Best Of 2024</h3>
             <p>
               A class project focused on work environment and new CSS/JS skills.
@@ -20,7 +20,7 @@ function Projects() {
             </a>
           </div>
           <div className="project-card">
-            <img src="./images/taskManager.png" alt="Task Manager" />
+            <img src="./src/assets/images/taskManager.png" alt="Task Manager" />
             <h3>Task Manager</h3>
             <p>
               My exam project, learning back-end development with Node.js and SQLite.
@@ -35,7 +35,7 @@ function Projects() {
             </a>
           </div>
           <div className="project-card">
-            <img src="./images/stam.png" alt="STAM Museum" />
+            <img src="./src/assets/images/stam.png" alt="STAM Museum" />
             <h3>STAM Museum</h3>
             <p>
               A responsive website for the STAM museum in Ghent, focused on styling.
@@ -50,7 +50,7 @@ function Projects() {
             </a>
           </div>
           <div className="project-card">
-            <img src="./images/startToCode.png" alt="Start to Code" />
+            <img src="./src/assets/images/startToCode.png" alt="Start to Code" />
             <h3>Start to Code</h3>
             <p>
               A beginner tutorial site made with a classmate, focused on teamwork.
