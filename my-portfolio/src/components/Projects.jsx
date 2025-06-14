@@ -4,8 +4,8 @@ function Projects() {
       <div className="projects">
         <h2 className="projects__title">Projects</h2>
         <div className="projects__grid">
-          <div className="project-card">
-            <img src="./images/bestof.png" alt="Best Of 2024" />
+          <article className="project-card">
+            <img src="./images/bestof.png" alt="Screenshot of Best Of 2024 project" />
             <h3>Best Of 2024</h3>
             <p>
               A class project focused on work environment and new CSS/JS skills.
@@ -18,9 +18,9 @@ function Projects() {
             >
               View on GitHub
             </a>
-          </div>
-          <div className="project-card">
-            <img src="./images/taskManager.png" alt="Task Manager" />
+          </article>
+          <article className="project-card">
+            <img src="./images/taskManager.png" alt="Screenshot of Task Manager project" />
             <h3>Task Manager</h3>
             <p>
               My exam project, learning back-end development with Node.js and SQLite.
@@ -33,9 +33,9 @@ function Projects() {
             >
               View on GitHub
             </a>
-          </div>
-          <div className="project-card">
-            <img src="./images/stam.png" alt="STAM Museum" />
+          </article>
+          <article className="project-card">
+            <img src="./images/stam.png" alt="Screenshot of STAM Museum project" />
             <h3>STAM Museum</h3>
             <p>
               A responsive website for the STAM museum in Ghent, focused on styling.
@@ -48,9 +48,9 @@ function Projects() {
             >
               View on GitHub
             </a>
-          </div>
-          <div className="project-card">
-            <img src="./images/startToCode.png" alt="Start to Code" />
+          </article>
+          <article className="project-card">
+            <img src="./images/startToCode.png" alt="Screenshot of Start to Code project" />
             <h3>Start to Code</h3>
             <p>
               A beginner tutorial site made with a classmate, focused on teamwork.
@@ -63,7 +63,7 @@ function Projects() {
             >
               View on GitHub
             </a>
-          </div>
+          </article>
         </div>
       </div>
     </section>

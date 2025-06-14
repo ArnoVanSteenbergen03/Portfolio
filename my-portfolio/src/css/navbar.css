@@ -1,0 +1,60 @@
+/* Navbar styles */
+.header {
+  width: 100%;
+  background: var(--base, #fff);
+  box-shadow: 0 4px 6px var(--border, #7fa1f0);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+}
+
+.nav__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text, #222);
+}
+
+.nav__list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: var(--text, #222);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav__link:hover,
+.nav__link.active {
+  color: var(--accent, #7fa1f0);
+}
+
+@media (max-width: 700px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  .nav__list {
+    gap: 1rem;
+  }
+  .nav__title {
+    font-size: 1.2rem;
+  }
+}
