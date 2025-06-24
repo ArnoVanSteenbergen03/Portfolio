@@ -3,7 +3,7 @@ function Contact() {
     <section className="section" id="contact">
       <div className="contact">
         <h2 className="contact__title">Contact</h2>
-        <form className="contact__form" method="POST" netlify>
+        <form className="contact__form" method="POST" name="contact" data-netlify="true">
           <div className="form__group">
             <label className="form__label">Name</label>
             <input
