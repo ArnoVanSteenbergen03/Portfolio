@@ -6,17 +6,11 @@ function Contact() {
         <form className="contact__form" method="POST" name="contact" data-netlify="true">
           <div className="form__group">
             <label className="form__label">Name</label>
-            <input
-              className="form__input"
-              id="name"
-              name="name"
-              type="text"
-              required
-            />
+            <input className="form__input" type="hidden" name="form-name" value="contact" required/>
           </div>
           <div className="form__group">
             <label className="form__label">Email</label>
-            <input className="form__input" id="email" name="email" type="email" required />
+            <input className="form__input" type="hidden" name="form-email" value="contact" required />
           </div>
           <div className="form__group">
             <label className="form__label">Message</label>
