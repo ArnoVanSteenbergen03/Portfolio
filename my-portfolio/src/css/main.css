@@ -4,3 +4,11 @@
 @import url("./contact.css");
 @import url("./home.css");
 @import url("./about.css");
+
+:root {
+    --text: #222;
+    --accent: #7fa1f0;
+    --border: #5a8be7;
+    --background: #f8faff;
+    --highlight: #ff6347; 
+}

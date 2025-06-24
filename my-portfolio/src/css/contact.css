@@ -1,55 +1,63 @@
-.section {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 1rem 2rem 1rem;
-  box-sizing: border-box;
-}
+/* Basic form styling for Contact.jsx */
 
-.contact {
-  max-width: 700px;
-  width: 100%;
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 12px rgba(127,161,240,0.08);
-  padding: 2.5rem 2rem;
+.contact__form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.contact__title {
-  font-size: 2rem;
-  color: var(--accent);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.contact__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.form__group {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-}
-
-.contact__item {
-  font-size: 1.1rem;
-  color: var(--text);
-  display: flex;
-  align-items: center;
   gap: 0.5rem;
 }
 
-.contact__item a {
-  color: var(--accent);
-  text-decoration: underline;
-  transition: color 0.2s;
+.form__label {
+  font-weight: 500;
+  color: var(--text);
 }
 
-.contact__item a:hover {
-  color: var(--border);
+.form__input,
+.form__text {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #f8faff;
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+
+.form__input:focus,
+.form__text:focus {
+  outline: none;
+  border-color: var(--accent, #7fa1f0);
+  background: #fff;
+}
+
+.form__button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  background: var(--accent, #7fa1f0);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.form__button:hover {
+  background: var(--border, #5a8be7);
+}
+
+@media (max-width: 600px) {
+  .contact__form {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
 }
