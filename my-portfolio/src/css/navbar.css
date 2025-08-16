@@ -1,8 +1,9 @@
 /* Navbar styles */
 .header {
   width: 100%;
-  background: var(--base, #fff);
-  box-shadow: 0 4px 6px var(--border, #7fa1f0);
+  background: var(--bg-primary);
+  box-shadow: 0 4px 6px var(--shadow);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -20,7 +21,7 @@
 .nav__title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--text, #222);
+  color: var(--text-primary);
 }
 
 .nav__list {
@@ -32,17 +33,34 @@
 }
 
 .nav__link {
-  color: var(--text, #222);
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
   position: relative;
   transition: color 0.2s;
+  padding-bottom: 0.5rem;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
 }
 
 .nav__link:hover,
 .nav__link.active {
-  color: var(--accent, #7fa1f0);
+  color: var(--primary);
+}
+
+.nav__link:hover::after,
+.nav__link.active::after {
+  width: 100%;
 }
 
 @media (max-width: 700px) {

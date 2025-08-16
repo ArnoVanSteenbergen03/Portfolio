@@ -1,7 +1,16 @@
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <section className="section" id="home">
       <div className="home">
+        <div className="home__profile">
+          <img 
+            src="/images/profile.jpg" 
+            alt="Arno Van Steenbergen" 
+            className="home__profile-img"
+          />
+        </div>
         <h1 className="home__title">
           Hi, I'm <span className="highlight">Arno</span>
         </h1>
@@ -11,8 +20,8 @@ function Home() {
           Currently specializing in JavaScript technologies and cloud development.
         </p>
         <div className="home__cta">
-          <a href="#projects" className="cta-btn">View My Work</a>
-          <a href="#contact" className="cta-btn secondary">Contact Me</a>
+          <Link to="/projects" className="cta-btn">View My Work</Link>
+          <Link to="/contact" className="cta-btn secondary">Contact Me</Link>
         </div>
       </div>
     </section>

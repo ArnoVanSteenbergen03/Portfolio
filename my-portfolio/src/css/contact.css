@@ -17,7 +17,7 @@
 
 .form__label {
   font-weight: 500;
-  color: var(--text);
+  color: var(--text-primary);
 }
 
 .form__input,
@@ -26,33 +26,36 @@
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   font-size: 1rem;
-  background: #f8faff;
-  color: var(--text);
-  transition: border-color 0.2s;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
 .form__input:focus,
 .form__text:focus {
   outline: none;
-  border-color: var(--accent, #7fa1f0);
-  background: #fff;
+  border-color: var(--primary);
+  background: var(--bg-primary);
 }
 
 .form__button {
   padding: 0.7rem 1.5rem;
   border-radius: 2rem;
-  background: var(--accent, #7fa1f0);
+  background: var(--primary);
   color: #fff;
   border: none;
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
   margin-top: 0.5rem;
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 .form__button:hover {
-  background: var(--border, #5a8be7);
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--shadow);
 }
 
 @media (max-width: 600px) {
