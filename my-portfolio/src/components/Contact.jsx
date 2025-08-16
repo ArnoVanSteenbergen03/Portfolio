@@ -16,34 +16,35 @@ function Contact() {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    try {
-      // Netlify form submission
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          ...formData
-        }).toString()
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ 
+        "form-name": "contact",
+        ...formData 
+      })
+    })
+    .then(() => {
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch(() => {
       setSubmitStatus('error');
-    } finally {
+    })
+    .finally(() => {
       setIsSubmitting(false);
-    }
+    });
   };
 
   return (
@@ -54,15 +55,17 @@ function Contact() {
           Get in touch! I'd love to hear about your project ideas and opportunities.
         </p>
         
+        {/* Hidden form for Netlify detection */}
+        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
+        </form>
+        
         <form 
           className="contact__form" 
-          method="POST" 
-          name="contact" 
-          data-netlify="true"
           onSubmit={handleSubmit}
         >
-          <input type="hidden" name="form-name" value="contact" />
-          
           <div className="form__group">
             <label className="form__label" htmlFor="name">Name</label>
             <input 
