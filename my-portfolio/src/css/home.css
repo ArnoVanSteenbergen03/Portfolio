@@ -7,6 +7,7 @@
   padding: 4rem 1rem 2rem 1rem;
   box-sizing: border-box;
   background-color: var(--bg-primary);
+  overflow-x: hidden;
 }
 
 .home {
@@ -114,5 +115,11 @@
   }
   .home {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 0.75rem 1rem 0.75rem;
   }
 }

@@ -7,6 +7,7 @@
   padding: 4rem 1rem 2rem 1rem;
   box-sizing: border-box;
   background-color: var(--bg-primary);
+  overflow-x: hidden;
 }
 
 .projects {
@@ -23,8 +24,9 @@
 
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  width: 100%;
 }
 
 .project-card {
@@ -117,4 +119,11 @@
   border-radius: 0.3rem;
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }

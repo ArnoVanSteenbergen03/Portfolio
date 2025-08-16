@@ -16,7 +16,7 @@ function Home() {
         </h1>
         <h2 className="home__subtitle">Full-Stack Developer</h2>
         <p className="home__desc">
-          I build robust back-end systems and great front-end experiences.<br />
+          I like to build complex web applications with lots of functionality.<br />
           Currently specializing in JavaScript technologies and cloud development.
         </p>
         <div className="home__cta">

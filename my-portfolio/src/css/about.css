@@ -7,6 +7,7 @@
   padding: 4rem 1rem 2rem 1rem;
   box-sizing: border-box;
   background-color: var(--bg-primary);
+  overflow-x: hidden;
 }
 
 .about {
@@ -17,7 +18,6 @@
   gap: 4rem;
 }
 
-/* Intro Section */
 .about__intro {
   text-align: center;
   background: var(--bg-secondary);
@@ -54,7 +54,6 @@
   border-left: 4px solid var(--primary);
 }
 
-/* Section Titles */
 .section__title {
   font-size: 1.8rem;
   color: var(--text-primary);
@@ -75,7 +74,6 @@
   border-radius: 2px;
 }
 
-/* Skills Section */
 .about__skills {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
@@ -153,7 +151,6 @@
   transition: width 1s ease-in-out;
 }
 
-/* Journey Section */
 .about__journey {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
@@ -224,7 +221,6 @@
   line-height: 1.5;
 }
 
-/* Interests Section */
 .about__interests {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
@@ -267,7 +263,6 @@
   line-height: 1.4;
 }
 
-/* CTA Section */
 .about__cta {
   text-align: center;
   background: var(--bg-secondary);
@@ -301,7 +296,6 @@
   box-shadow: 0 6px 16px var(--shadow);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .about {
     gap: 3rem;

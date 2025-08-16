@@ -55,7 +55,6 @@ function Contact() {
           Get in touch! I'd love to hear about your project ideas and opportunities.
         </p>
         
-        {/* Hidden form for Netlify detection */}
         <form name="contact" netlify netlify-honeypot="bot-field" hidden>
           <input type="text" name="name" />
           <input type="email" name="email" />

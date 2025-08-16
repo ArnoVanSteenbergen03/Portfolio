@@ -9,8 +9,8 @@ import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   return (
-    <>
-    <Navigation />
+    <div className="app-container">
+      <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
@@ -19,7 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <ThemeToggle />
-    </>
+    </div>
   );
 }
 

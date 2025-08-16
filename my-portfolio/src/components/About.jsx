@@ -1,37 +1,56 @@
 import { Link } from "react-router-dom";
 
 const skillsData = [
-  { name: 'JavaScript', level: 90, icon: '🚀', category: 'Frontend' },
-  { name: 'Node.js', level: 85, icon: '⚡', category: 'Backend' },
-  { name: 'React', level: 80, icon: '⚛️', category: 'Frontend' },
-  { name: 'CSS/SCSS', level: 85, icon: '🎨', category: 'Frontend' },
-  { name: 'SQL', level: 75, icon: '🗄️', category: 'Database' },
-  { name: 'HTML5', level: 95, icon: '📄', category: 'Frontend' }
+  { name: "JavaScript", level: 90, icon: "🚀", category: "Frontend" },
+  { name: "Node.js", level: 85, icon: "⚡", category: "Backend" },
+  { name: "React", level: 80, icon: "⚛️", category: "Frontend" },
+  { name: "CSS/SCSS", level: 85, icon: "🎨", category: "Frontend" },
+  { name: "SQL", level: 75, icon: "🗄️", category: "Database" },
+  { name: "HTML5", level: 95, icon: "📄", category: "Frontend" },
 ];
 
 const timelineData = [
   {
-    year: '2024',
-    title: 'Full-Stack Projects',
-    description: 'Built comprehensive applications using Node.js, React, and databases'
+    year: "2024",
+    title: "Started at Artevelde Hogeschool",
+    description:
+      "I switched courses to focus more on web development. Artevelde Hogeschool has a great course for programming where they focus on modern web technologies. I also learned what CMS's are and how to work with them.",
   },
   {
-    year: '2023',
-    title: 'Started at Artevelde Hogeschool',
-    description: 'Began my journey in Programming with focus on modern web technologies'
+    year: "2021",
+    title: "Started at HoGent",
+    description:
+      "I first started a programming course at HoGent, But they focused more on C# than web development which I like working on more.",
   },
   {
-    year: '2019',
-    title: 'First Line of Code',
-    description: 'Started learning programming with curiosity and passion'
-  }
+    year: "2019",
+    title: "First Line of Code",
+    description:
+      "Started learning programming in highschool working on websites in basic HTML, CSS & JS. I also worked on C# projects.",
+  },
 ];
 
 const interests = [
-  { icon: '💻', title: 'Web Development', description: 'Creating modern, responsive web applications' },
-  { icon: '🎮', title: 'Gaming', description: 'Enjoying strategic and creative games' },
-  { icon: '🌱', title: 'Learning', description: 'Always exploring new technologies and frameworks' },
-  { icon: '🏗️', title: 'Building', description: 'Love creating things from scratch' }
+  {
+    icon: "💻",
+    title: "Web Development",
+    description: "Creating modern, responsive web applications",
+  },
+  {
+    icon: "🎮",
+    title: "Gaming",
+    description: "I enjoy a good game now and then after a long day of coding.",
+  },
+  {
+    icon: "🌱",
+    title: "Learning",
+    description: "I love learning new things and new languages",
+  },
+  {
+    icon: "💪",
+    title: "Gym",
+    description: "I love working out and staying fit. It helps me clear my mind and stay focused.",
+  },
 ];
 
 function About() {
@@ -41,13 +60,15 @@ function About() {
         <div className="about__intro">
           <h2 className="about__title">About Me</h2>
           <p className="about__desc">
-            Hi! I'm Arno, a passionate junior full-stack developer from Ghent, Belgium. 
-            With a Graduaat Programming degree from Artevelde Hogeschool and 5 years of coding experience, 
-            I specialize in creating robust back-end systems while crafting engaging front-end experiences.
+            Hi! I'm Arno, a passionate junior full-stack developer from Ghent,
+            Belgium. With a Graduaat Programming degree from Artevelde
+            Hogeschool and 5 years of coding experience, I specialize in
+            creating robust back-end systems while crafting engaging front-end
+            experiences.
           </p>
           <p className="about__highlight">
-            I believe in writing clean, efficient code and continuously learning new technologies 
-            to solve real-world problems.
+            I believe in writing clean, efficient code and continuously learning
+            new technologies to implement in my site's development.
           </p>
         </div>
 
@@ -65,8 +86,8 @@ function About() {
                   <span className="skill-level">{skill.level}%</span>
                 </div>
                 <div className="skill-bar">
-                  <div 
-                    className="skill-progress" 
+                  <div
+                    className="skill-progress"
                     style={{ width: `${skill.level}%` }}
                   ></div>
                 </div>
@@ -106,7 +127,9 @@ function About() {
 
         <div className="about__cta">
           <p className="cta-text">Want to work together?</p>
-          <Link to="/contact" className="cta-button">Let's Connect</Link>
+          <Link to="/contact" className="cta-button">
+            Let's Connect
+          </Link>
         </div>
       </div>
     </section>

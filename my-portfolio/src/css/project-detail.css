@@ -1,4 +1,3 @@
-/* Project Detail Page */
 .project-detail {
   max-width: 1000px;
   width: 100%;
@@ -158,7 +157,6 @@
   font-weight: bold;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .project-detail {
     padding: 1rem;
