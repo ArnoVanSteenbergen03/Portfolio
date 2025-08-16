@@ -129,10 +129,10 @@ function Contact() {
         <div className="contact__info">
           <h3>Other Ways to Reach Me</h3>
           <div className="contact__links">
-            <a href="mailto:arno.vansteenbergen@example.com" className="contact__link">
-              📧 arno.vansteenbergen@example.com
+            <a href="mailto:arno.van.steenbergen1@gmail.com" className="contact__link">
+              📧 arno.van.steenbergen1@gmail.com
             </a>
-            <a href="https://linkedin.com/in/yourprofile" className="contact__link">
+            <a href="https://www.linkedin.com/in/arno-van-steenbergen-a6092a290?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BpJl0cMCrRqG90F53%2B7KzPw%3D%3D" className="contact__link">
               💼 LinkedIn
             </a>
             <a href="https://github.com/ArnoVanSteenbergen03" className="contact__link">
