@@ -1,13 +1,59 @@
 [
   {
+    "id": "sea-life-quiz",
+    "title": "Sea Life Quiz",
+    "description": "An interactive quiz application with admin panel",
+    "fullDescription": "This project is an interactive quiz application that tests users' knowledge about sealife. It includes an admin panel for managing quizzes, questions, answers & images. It also has a periodic data export to excel. This project was for my exam project at Artevelde Hogeschool.",
+    "image": "./images/seaLifeQuiz.png",
+    "images": [
+      "./images/seaLifeQuiz.png",
+      "./images/seaLifeAdmin.png",
+      "./images/seaLifeQuestion.png",
+      "./images/seaLifeFeedback.png"
+    ],
+    "githubUrl": "https://github.com/Code-Trooper66/SeaLife-Quiz",
+    "liveUrl": "#",
+    "technologies": [
+      "Node.js",
+      "Express.js",
+      "Knex",
+      "SQLite3",
+      "EJS",
+      "CSS3",
+      "Multer",
+      "I18n",
+      "ExcelJS"
+
+    ],
+    "year": "2025",
+    "features": [
+      "Quiz with Authorization",
+      "Admin Panel",
+      "Data Export to Excel",
+      "Image Upload",
+      "3 Language Translation"
+    ]
+  },
+  {
     "id": "best-of-2024",
     "title": "Best Of 2024",
     "description": "A class project focused on work environment and new CSS/JS skills.",
     "fullDescription": "This project was developed as part of my coursework, focusing on creating a modern web application using the latest CSS techniques and JavaScript features. The project demonstrates responsive design principles, modern CSS Grid and Flexbox layouts, and interactive JavaScript functionality.",
     "image": "./images/bestof.png",
+    "images": [
+      "./images/bestof.png",
+      "./images/bestof-mobile.png",
+      "./images/bestof-features.png"
+    ],
     "githubUrl": "https://github.com/Suka-Baguette/BestOf2024",
     "liveUrl": "#",
-    "technologies": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "CSS Grid"],
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Responsive Design",
+      "CSS Grid"
+    ],
     "year": "2024",
     "features": [
       "Modern responsive design",
@@ -24,7 +70,14 @@
     "image": "./images/taskManager.png",
     "githubUrl": "https://github.com/Suka-Baguette/taskManager",
     "liveUrl": "#",
-    "technologies": ["Node.js", "Express.js", "SQLite", "HTML", "CSS", "JavaScript"],
+    "technologies": [
+      "Node.js",
+      "Express.js",
+      "SQLite",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "year": "2024",
     "features": [
       "User authentication system",
@@ -41,7 +94,13 @@
     "image": "./images/stam.png",
     "githubUrl": "https://github.com/Suka-Baguette/STAM-Museum",
     "liveUrl": "#",
-    "technologies": ["HTML5", "CSS3", "Responsive Design", "Mobile-First", "Accessibility"],
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Responsive Design",
+      "Mobile-First",
+      "Accessibility"
+    ],
     "year": "2023",
     "features": [
       "Mobile-first responsive design",

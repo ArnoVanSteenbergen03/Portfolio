@@ -30,10 +30,39 @@
   align-items: start;
 }
 
+.project-detail__image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .project-detail__image {
   width: 100%;
   border-radius: 1rem;
   box-shadow: 0 8px 24px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.project-detail__image.clickable {
+  cursor: pointer;
+}
+
+.project-detail__image.clickable:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 32px var(--shadow);
+}
+
+.image-gallery-indicator {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .project-detail__info {
