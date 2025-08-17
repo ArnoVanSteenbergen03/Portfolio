@@ -42,8 +42,9 @@
     "image": "./images/bestof.png",
     "images": [
       "./images/bestof.png",
-      "./images/bestof-mobile.png",
-      "./images/bestof-features.png"
+      "./images/bestofAlbum.png",
+      "./images/bestofMusic.png",
+      "./images/bestofMovie.png"
     ],
     "githubUrl": "https://github.com/Suka-Baguette/BestOf2024",
     "liveUrl": "#",
@@ -60,30 +61,6 @@
       "Interactive user interface",
       "Optimized performance",
       "Cross-browser compatibility"
-    ]
-  },
-  {
-    "id": "task-manager",
-    "title": "Task Manager",
-    "description": "My exam project, learning back-end development with Node.js and SQLite.",
-    "fullDescription": "A full-stack task management application built as my exam project. This project demonstrates my understanding of server-side development, database design, and API creation using Node.js and SQLite.",
-    "image": "./images/taskManager.png",
-    "githubUrl": "https://github.com/Suka-Baguette/taskManager",
-    "liveUrl": "#",
-    "technologies": [
-      "Node.js",
-      "Express.js",
-      "SQLite",
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "year": "2024",
-    "features": [
-      "User authentication system",
-      "CRUD operations for tasks",
-      "RESTful API design",
-      "Database integration"
     ]
   },
   {
