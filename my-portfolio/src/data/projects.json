@@ -100,7 +100,7 @@
     "fullDescription": "A responsive website created for the STAM museum in Ghent, Belgium. This project emphasizes modern web design principles, accessibility, and mobile-first responsive design approach.",
     "image": "./images/stam.png",
     "githubUrl": "https://github.com/Suka-Baguette/STAM-Museum",
-    "liveUrl": "#",
+    "liveUrl": "https://portfolioarno.netlify.app",
     "technologies": [
       "HTML5",
       "CSS3",
