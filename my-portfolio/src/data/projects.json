@@ -41,7 +41,9 @@
     "fullDescription": "This project is my personal portfolio website, designed to showcase my skills, projects, and experience. It features a modern design, responsive layout, and interactive elements to engage visitors.",
     "image": "./images/portfolio.png",
     "images": [
-      "./images/portfolio.png"
+      "./images/portfolio.png",
+      "./images/portfolio-skills.png",
+      "./images/portfolio-contact.png"
     ],
     "githubUrl": "https://github.com/ArnoVanSteenbergen03/Portfolio",
     "liveUrl": "#",
