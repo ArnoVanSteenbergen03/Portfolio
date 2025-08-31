@@ -49,7 +49,8 @@ const interests = [
   {
     icon: "💪",
     title: "Gym",
-    description: "I love working out and staying fit. It helps me clear my mind and stay focused.",
+    description:
+      "I love working out and staying fit. It helps me clear my mind and stay focused.",
   },
 ];
 

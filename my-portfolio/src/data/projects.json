@@ -11,7 +11,7 @@
       "./images/seaLifeQuestion.png",
       "./images/seaLifeFeedback.png"
     ],
-    "githubUrl": "https://github.com/Code-Trooper66/SeaLife-Quiz",
+    "githubUrl": "https://github.com/pgmgent-atwork2/project-ek2-ArnoVanSteenbergen03",
     "liveUrl": "#",
     "technologies": [
       "Node.js",
@@ -32,6 +32,34 @@
       "Data Export to Excel",
       "Image Upload",
       "3 Language Translation"
+    ]
+  },
+  {
+    "id": "portfolio",
+    "title": "My Portfolio",
+    "description": "A personal portfolio showcasing my projects and skills.",
+    "fullDescription": "This project is my personal portfolio website, designed to showcase my skills, projects, and experience. It features a modern design, responsive layout, and interactive elements to engage visitors.",
+    "image": "./images/portfolio.png",
+    "images": [
+      "./images/portfolio.png"
+    ],
+    "githubUrl": "https://github.com/ArnoVanSteenbergen03/Portfolio",
+    "liveUrl": "#",
+    "technologies": [
+      "React",
+      "Vite",
+      "ESLint",
+      "React-Router-Dom",
+      "React-Dom",
+      "CSS3",
+      "JavaScript"
+    ],
+    "year": "2025",
+    "features": [
+      "Responsive",
+      "Single Page Application",
+      "Theme switcher",
+      "Form Submission"
     ]
   },
   {

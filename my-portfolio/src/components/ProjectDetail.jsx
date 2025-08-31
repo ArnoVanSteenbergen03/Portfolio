@@ -100,7 +100,6 @@ function ProjectDetail() {
           )}
         </div>
 
-        {/* Image Slider Component */}
         <ImageSlider 
           images={projectImages.map(img => `../${img}`)}
           projectTitle={project.title}
