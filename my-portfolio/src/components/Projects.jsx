@@ -20,7 +20,12 @@ function Projects() {
                 <span className="project-year">{project.year}</span>
                 <div className="project-tech">
                   {project.technologies.slice(0, 2).map((tech, index) => (
-                    <span key={index} className="tech-tag">{tech}</span>
+                    <span
+                      key={index}
+                      className={`tech-tag${tech === 'WORK IN PROGRESS' ? ' tech-wip' : ''}`}
+                    >
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </div>

@@ -118,6 +118,12 @@
   padding: 0.2rem 0.5rem;
   border-radius: 0.3rem;
   font-size: 0.8rem;
+}
+
+.tech-wip {
+  background: #ffe5e5;
+  color: #d32f2f;
+  font-weight: bold;
   font-weight: 500;
 }
 

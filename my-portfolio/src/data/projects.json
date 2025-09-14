@@ -1,5 +1,39 @@
 [
   {
+    "id": "recipe-book",
+    "title": "Recipe Book",
+    "description": "A web application for managing and sharing recipes.",
+    "fullDescription": "This project is a recipe book application that allows users to create, edit, and share their favorite recipes/spices. It features a user-friendly interface built with React and utilizes a RESTful API for data management with Firebase.",
+    "image": "./images/recipeBook.png",
+    "images": [
+      "./images/recipeBook.png",
+      "./images/recipeBook-ingredients.png",
+      "./images/recipeBook-instructions.png"
+    ],
+    "githubUrl": "https://github.com/ArnoVanSteenbergen03/RecipeBook",
+    "liveUrl": "https://recipebook-c4596.web.app/",
+    "technologies": [
+      "WORK IN PROGRESS",
+      "React",
+      "Vite",
+      "React-Router-Dom",
+      "React-Dom",
+      "CSS3",
+      "JavaScript",
+      "Firebase",
+      "BcryptJS"
+
+    ],
+    "year": "2025",
+    "features": [
+      "Public & Private Recipes/Spices",
+      "Full CRUD Functionality",
+      "Responsive",
+      "User Authentication",
+      "Search & Filter"
+    ]
+  },
+  {
     "id": "sea-life-quiz",
     "title": "Sea Life Quiz",
     "description": "An interactive quiz application with admin panel",
