@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 const skillsData = [
   { name: "JavaScript", level: 90, icon: "🚀", category: "Frontend" },
   { name: "Node.js", level: 85, icon: "⚡", category: "Backend" },
-  { name: "React", level: 80, icon: "⚛️", category: "Frontend" },
+  { name: "React", level: 75, icon: "⚛️", category: "Frontend" },
   { name: "CSS/SCSS", level: 85, icon: "🎨", category: "Frontend" },
   { name: "SQL", level: 75, icon: "🗄️", category: "Database" },
   { name: "HTML5", level: 95, icon: "📄", category: "Frontend" },
+  { name: "Craft CMS", level: 65, icon: "🛠️", category: "CMS" },
 ];
 
 const timelineData = [

@@ -4,11 +4,9 @@
     "title": "Recipe Book",
     "description": "A web application for managing and sharing recipes.",
     "fullDescription": "This project is a recipe book application that allows users to create, edit, and share their favorite recipes/spices. It features a user-friendly interface built with React and utilizes a RESTful API for data management with Firebase.",
-    "image": "./images/recipeBook.png",
+    "image": "./images/wip.png",
     "images": [
-      "./images/recipeBook.png",
-      "./images/recipeBook-ingredients.png",
-      "./images/recipeBook-instructions.png"
+      "./images/recipeBook.png"
     ],
     "githubUrl": "https://github.com/ArnoVanSteenbergen03/RecipeBook",
     "liveUrl": "https://recipebook-c4596.web.app/",
