@@ -11,6 +11,7 @@ const skillsData = [
   { name: "TypeScript", level: 25, icon: "🔷", category: "Frontend" },
   { name: "C#", level: 50, icon: "🎯", category: "Backend" },
   { name: "PHP", level: 10, icon: "🐘", category: "Backend" },
+  { name: "Laravel", level: 10, icon: "🅻", category: "Backend" },
 ];
 
 const timelineData = [
