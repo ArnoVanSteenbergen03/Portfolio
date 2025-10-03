@@ -19,6 +19,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <ThemeToggle />
+      <footer>&copy;
+            {new Date().getFullYear()}
+            - AVSWorks</footer>
     </div>
   );
 }
