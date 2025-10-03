@@ -32,6 +32,35 @@
     ]
   },
   {
+    "id": "niche-community",
+    "title": "Niche Community",
+    "description": "A test app to learn PHP and the BaseMVC model.",
+    "fullDescription": "This project is a niche community application. in this excercise I learned the basics of PHP and the BaseMVC model. The app allows users to view a list of characters from the Star Wars Universe, with detailed pages for each character. It also includes a search filter to easily find characters by name.",
+    "image": "./images/starwarshome.png",
+    "images": [
+      "./images/starwarshome.png",
+      "./images/starwarschar.png",
+      "./images/starwarsabout.png"
+    ],
+    "githubUrl": "https://github.com/ArnoVanSteenbergen03/niche-community",
+    "liveUrl": "#",
+    "technologies": [
+      "PHP",
+      "MySQL",
+      "CSS",
+      "BaseMVC",
+      "DDEV"
+    ],
+    "year": "2025",
+    "features": [
+      "Detail page for each character",
+      "Search Filter",
+      "Responsive",
+      "Database Integration",
+      "BaseMVC Structure"
+    ]
+  },
+  {
     "id": "sea-life-quiz",
     "title": "Sea Life Quiz",
     "description": "An interactive quiz application with admin panel",
@@ -43,7 +72,7 @@
       "./images/seaLifeQuestion.png",
       "./images/seaLifeFeedback.png"
     ],
-    "githubUrl": "https://github.com/pgmgent-atwork2/project-ek2-ArnoVanSteenbergen03",
+    "githubUrl": "https://github.com/ArnoVanSteenbergen03/SeaLife-Quiz",
     "liveUrl": "#",
     "technologies": [
       "Node.js",
