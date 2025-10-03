@@ -9,9 +9,9 @@ const skillsData = [
   { name: "SQL", level: 75, icon: "🗄️", category: "Database" },
   { name: "HTML5", level: 95, icon: "📄", category: "Frontend" },
   { name: "Craft CMS", level: 65, icon: "🛠️", category: "CMS" },
-  { name: "TypeScript", level: 50, icon: "🔷", category: "Frontend" },
+  { name: "TypeScript", level: 60, icon: "🔷", category: "Frontend" },
   { name: "C#", level: 50, icon: "🎯", category: "Backend" },
-  { name: "PHP", level: 10, icon: "🐘", category: "Backend" },
+  { name: "PHP", level: 40, icon: "🐘", category: "Backend" },
   { name: "Laravel", level: 10, icon: "🅻", category: "Backend" },
 ];
 
