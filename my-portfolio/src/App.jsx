@@ -19,7 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <ThemeToggle />
-      <footer>&copy;
+      <footer className="footer">&copy;
             {new Date().getFullYear()}
             - AVSWorks</footer>
     </div>
