@@ -6,10 +6,12 @@ import ProjectDetail from "./components/ProjectDetail";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import ThemeToggle from "./components/ThemeToggle";
+import Background from "./components/Background";
 
 function App() {
   return (
     <div className="app-container">
+      <Background />
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,9 +21,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <ThemeToggle />
-      <footer className="footer">&copy;
-            {new Date().getFullYear()}
-            - AVSWorks</footer>
+      <footer className="footer">
+        &copy;
+        {new Date().getFullYear()}- AVSWorks
+      </footer>
     </div>
   );
 }

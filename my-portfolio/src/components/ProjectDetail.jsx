@@ -17,7 +17,7 @@ function ProjectDetail() {
         <div className="project-detail">
           <h1>Project Not Found</h1>
           <p>The project you're looking for doesn't exist.</p>
-          <Link to="/projects" className="back-button cursor-target">
+          <Link to="/projects" className="back-button">
             ← Back to Projects
           </Link>
         </div>
@@ -35,16 +35,16 @@ function ProjectDetail() {
   return (
     <section className="section">
       <div className="project-detail">
-        <Link to="/projects" className="back-button cursor-target">
+        <Link to="/projects" className="back-button">
           ← Back to Projects
         </Link>
 
         <div className="project-detail__header">
           <div className="project-detail__image-container">
-            <img
+              <img
               src={projectImages[0]}
               alt={`Screenshot of ${project.title} project`}
-              className="project-detail__image clickable cursor-target"
+              className="project-detail__image clickable"
               onClick={openSlider}
               title="Click to view image gallery"
             />
@@ -64,7 +64,7 @@ function ProjectDetail() {
 
             <div className="project-detail__links">
               <a
-                className="project-button cursor-target"
+                className="project-button"
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -73,7 +73,7 @@ function ProjectDetail() {
               </a>
               {project.liveUrl && project.liveUrl !== "#" && (
                 <a
-                  className="project-button secondary cursor-target"
+                  className="project-button secondary"
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"

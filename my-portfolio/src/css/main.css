@@ -21,8 +21,8 @@
 
   /* Text Colors */
   --text-primary: #1e293b;
-  --text-secondary: #475569; 
-  --text-muted: #64748b; 
+  --text-secondary: #475569;
+  --text-muted: #64748b;
 
   /* Accent Colors */
   --accent: var(--primary);
@@ -38,9 +38,9 @@
 
 [data-theme="dark"] {
   /* Primary Colors */
-  --primary: #8b5cf6; 
-  --primary-light: #a78bfa; 
-  --primary-dark: #7c3aed; 
+  --primary: #8b5cf6;
+  --primary-light: #a78bfa;
+  --primary-dark: #7c3aed;
 
   /* Background Colors */
   --bg-primary: #0f0f23;
@@ -103,6 +103,13 @@ body {
   position: relative;
   bottom: 0;
   font-size: 0.875rem;
+}
+
+.home-page .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .split-highlight {

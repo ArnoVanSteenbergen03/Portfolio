@@ -46,7 +46,7 @@ function ImageSlider({ images, projectTitle, isOpen, onClose }) {
     >
       <div className="image-slider">
         <button
-          className="slider-close cursor-target"
+          className="slider-close"
           onClick={onClose}
           aria-label="Close slider"
         >
@@ -55,7 +55,7 @@ function ImageSlider({ images, projectTitle, isOpen, onClose }) {
 
         <div className="slider-content">
           <button
-            className="slider-nav prev cursor-target"
+            className="slider-nav prev"
             onClick={goToPrevious}
             aria-label="Previous image"
             disabled={images.length <= 1}
@@ -70,7 +70,7 @@ function ImageSlider({ images, projectTitle, isOpen, onClose }) {
           </div>
 
           <button
-            className="slider-nav next cursor-target"
+            className="slider-nav next"
             onClick={goToNext}
             aria-label="Next image"
             disabled={images.length <= 1}

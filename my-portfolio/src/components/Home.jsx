@@ -40,10 +40,10 @@ function Home() {
           development.
         </p>
         <div className="home__cta">
-          <Link to="/projects" className="cta-btn cursor-target">
+          <Link to="/projects" className="cta-btn">
             View My Work
           </Link>
-          <Link to="/contact" className="cta-btn secondary cursor-target">
+          <Link to="/contact" className="cta-btn secondary">
             Contact Me
           </Link>
         </div>
