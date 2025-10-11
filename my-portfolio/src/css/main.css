@@ -104,3 +104,9 @@ body {
   bottom: 0;
   font-size: 0.875rem;
 }
+
+.split-highlight {
+  color: var(--primary);
+  margin-left: 0.5rem;
+  font-weight: 700;
+}

@@ -8,12 +8,15 @@ function Projects() {
         <h2 className="projects__title">Projects</h2>
         <div className="projects__grid">
           {projectsData.map((project) => (
-            <Link 
+            <Link
               key={project.id}
               to={`/projects/${project.id}`}
               className="project-card"
             >
-              <img src={project.image} alt={`Screenshot of ${project.title} project`} />
+              <img
+                src={project.image}
+                alt={`Screenshot of ${project.title} project`}
+              />
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <div className="project-meta">
@@ -22,7 +25,9 @@ function Projects() {
                   {project.technologies.slice(0, 2).map((tech, index) => (
                     <span
                       key={index}
-                      className={`tech-tag${tech === 'WORK IN PROGRESS' ? ' tech-wip' : ''}`}
+                      className={`tech-tag${
+                        tech === "WORK IN PROGRESS" ? " tech-wip" : ""
+                      }`}
                     >
                       {tech}
                     </span>

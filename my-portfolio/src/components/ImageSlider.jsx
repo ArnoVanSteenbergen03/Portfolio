@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function ImageSlider({ images, projectTitle, isOpen, onClose }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -6,13 +6,13 @@ function ImageSlider({ images, projectTitle, isOpen, onClose }) {
   if (!isOpen || !images || images.length === 0) return null;
 
   const goToNext = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const goToPrevious = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
@@ -28,51 +28,53 @@ function ImageSlider({ images, projectTitle, isOpen, onClose }) {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Escape') {
+    if (e.key === "Escape") {
       onClose();
-    } else if (e.key === 'ArrowLeft') {
+    } else if (e.key === "ArrowLeft") {
       goToPrevious();
-    } else if (e.key === 'ArrowRight') {
+    } else if (e.key === "ArrowRight") {
       goToNext();
     }
   };
 
   return (
-    <div 
-      className="image-slider-overlay" 
+    <div
+      className="image-slider-overlay"
       onClick={handleBackdropClick}
       onKeyDown={handleKeyDown}
       tabIndex={0}
     >
       <div className="image-slider">
-        <button className="slider-close" onClick={onClose} aria-label="Close slider">
+        <button
+          className="slider-close cursor-target"
+          onClick={onClose}
+          aria-label="Close slider"
+        >
           ✕
         </button>
 
         <div className="slider-content">
-          <button 
-            className="slider-nav prev" 
+          <button
+            className="slider-nav prev cursor-target"
             onClick={goToPrevious}
             aria-label="Previous image"
             disabled={images.length <= 1}
-          >
-          </button>
+          ></button>
 
           <div className="slider-image-container">
-            <img 
-              src={images[currentImageIndex]} 
+            <img
+              src={images[currentImageIndex]}
               alt={`${projectTitle} - Image ${currentImageIndex + 1}`}
               className="slider-image"
             />
           </div>
 
-          <button 
-            className="slider-nav next" 
+          <button
+            className="slider-nav next cursor-target"
             onClick={goToNext}
             aria-label="Next image"
             disabled={images.length <= 1}
-          >
-          </button>
+          ></button>
         </div>
 
         {images.length > 1 && (
@@ -80,7 +82,9 @@ function ImageSlider({ images, projectTitle, isOpen, onClose }) {
             {images.map((_, index) => (
               <button
                 key={index}
-                className={`slider-dot ${index === currentImageIndex ? 'active' : ''}`}
+                className={`slider-dot ${
+                  index === currentImageIndex ? "active" : ""
+                }`}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to image ${index + 1}`}
               />
