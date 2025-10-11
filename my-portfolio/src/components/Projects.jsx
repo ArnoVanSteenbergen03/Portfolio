@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import projectsData from "../data/projects.json";
 
+const normalizeImagePath = (path) => {
+  if (!path || typeof path !== "string") return path;
+  if (path.startsWith("./")) return path.replace(/^\.\//, "/");
+  return path;
+};
+
 function Projects() {
   return (
     <section className="section" id="projects">
@@ -14,7 +20,7 @@ function Projects() {
               className="project-card"
             >
               <img
-                src={project.image}
+                src={normalizeImagePath(project.image)}
                 alt={`Screenshot of ${project.title} project`}
               />
               <h3>{project.title}</h3>

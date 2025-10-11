@@ -3,6 +3,12 @@ import { useParams, Link } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import ImageSlider from "./ImageSlider";
 
+const normalizeImagePath = (path) => {
+  if (!path || typeof path !== "string") return path;
+  if (path.startsWith("./")) return path.replace(/^\.\//, "/");
+  return path;
+};
+
 function ProjectDetail() {
   const { id } = useParams();
   const project = projectsData.find((p) => p.id === id);
@@ -27,9 +33,9 @@ function ProjectDetail() {
 
   const projectImages =
     project.images && project.images.length
-      ? project.images
+      ? project.images.map(normalizeImagePath)
       : project.image
-      ? [project.image]
+      ? [normalizeImagePath(project.image)]
       : [];
 
   return (

@@ -189,8 +189,10 @@ export default function Background() {
       const now = (performance.now() - start) / 1000;
       material.uniforms.u_time.value = now;
 
-      mouse.lerp(mouseTarget, 0.12);
-      material.uniforms.u_mouse.value.set(mouse.x, mouse.y);
+  mouse.lerp(mouseTarget, 0.12);
+  // DOM mouse Y = 0 at top; shader vUv Y = 0 at bottom.
+  // Flip the Y coordinate so moving the mouse up moves the effect up.
+  material.uniforms.u_mouse.value.set(mouse.x, window.innerHeight - mouse.y);
 
       if (performance.now() - lastMove > 2000) {
         mouseTarget.lerp(new THREE.Vector2(-10000, -10000), 0.02);
