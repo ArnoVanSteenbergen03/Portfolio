@@ -19,9 +19,10 @@ export default function Background() {
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-    renderer.setSize(window.innerWidth, window.innerHeight);
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  // Limit pixel ratio to avoid excessive GPU work on hi-dpi devices
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+  renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.domElement.style.position = "fixed";
     renderer.domElement.style.inset = "0";
     renderer.domElement.style.zIndex = "-1";
@@ -148,25 +149,41 @@ export default function Background() {
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
-    let frameId;
-    const start = performance.now();
+  let frameId;
+  const start = performance.now();
+  // Cap the target frame rate to reduce CPU/GPU usage (e.g. 30 FPS)
+  const TARGET_FPS = 30;
+  const FRAME_INTERVAL = 1000 / TARGET_FPS;
+  let lastFrameTime = performance.now();
 
     const mouse = new THREE.Vector2(-10000, -10000);
     const mouseTarget = new THREE.Vector2(-10000, -10000);
     let lastMove = 0;
 
-    function onPointerMove(e) {
+    // Throttle pointer updates using a small requestAnimationFrame-based queue
+    let pendingPointer = null;
+    function schedulePointer(x, y) {
+      pendingPointer = { x, y };
+    }
+
+    function flushPointer() {
+      if (!pendingPointer) return;
       const rect = renderer.domElement.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const x = pendingPointer.x - rect.left;
+      const y = pendingPointer.y - rect.top;
       mouseTarget.set(x, y);
       lastMove = performance.now();
+      pendingPointer = null;
+    }
+
+    function onPointerMove(e) {
+      schedulePointer(e.clientX, e.clientY);
     }
 
     function onTouch(e) {
       if (e.touches && e.touches.length) {
         const t = e.touches[0];
-        onPointerMove(t);
+        schedulePointer(t.clientX, t.clientY);
       }
     }
 
@@ -186,13 +203,26 @@ export default function Background() {
     });
 
     function render() {
-      const now = (performance.now() - start) / 1000;
+      const nowMs = performance.now();
+      const elapsed = nowMs - lastFrameTime;
+      if (elapsed < FRAME_INTERVAL) {
+        // skip this frame to cap FPS
+        frameId = requestAnimationFrame(render);
+        // still flush pointer so mouse feels responsive even when frames are skipped
+        flushPointer();
+        mouse.lerp(mouseTarget, 0.12);
+        return;
+      }
+      lastFrameTime = nowMs;
+
+      const now = (nowMs - start) / 1000;
       material.uniforms.u_time.value = now;
 
-  mouse.lerp(mouseTarget, 0.12);
-  // DOM mouse Y = 0 at top; shader vUv Y = 0 at bottom.
-  // Flip the Y coordinate so moving the mouse up moves the effect up.
-  material.uniforms.u_mouse.value.set(mouse.x, window.innerHeight - mouse.y);
+      // apply any queued pointer updates at animation frame timing
+      flushPointer();
+      mouse.lerp(mouseTarget, 0.12);
+      // DOM mouse Y = 0 at top; shader vUv Y = 0 at bottom.
+      material.uniforms.u_mouse.value.set(mouse.x, window.innerHeight - mouse.y);
 
       if (performance.now() - lastMove > 2000) {
         mouseTarget.lerp(new THREE.Vector2(-10000, -10000), 0.02);
@@ -208,11 +238,17 @@ export default function Background() {
       renderer.render(scene, camera);
     }
 
+    // Debounce resize handler to avoid thrashing during resizes
+    let resizeTimeout = null;
     function onResize() {
-      const w = window.innerWidth;
-      const h = window.innerHeight;
-      renderer.setSize(w, h);
-      material.uniforms.u_resolution.value.set(w, h);
+      if (resizeTimeout) clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        renderer.setSize(w, h);
+        material.uniforms.u_resolution.value.set(w, h);
+        resizeTimeout = null;
+      }, 150);
     }
 
     window.addEventListener("resize", onResize);

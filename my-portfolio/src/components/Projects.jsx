@@ -7,6 +7,14 @@ const normalizeImagePath = (path) => {
   return path;
 };
 
+const normalizedPathCache = new Map();
+const getNormalizedPath = (path) => {
+  if (normalizedPathCache.has(path)) return normalizedPathCache.get(path);
+  const v = normalizeImagePath(path);
+  normalizedPathCache.set(path, v);
+  return v;
+};
+
 function Projects() {
   return (
     <section className="section" id="projects">
@@ -20,8 +28,12 @@ function Projects() {
               className="project-card"
             >
               <img
-                src={normalizeImagePath(project.image)}
+                src={getNormalizedPath(project.image)}
                 alt={`Screenshot of ${project.title} project`}
+                loading="lazy"
+                decoding="async"
+                width={400}
+                height={240}
               />
               <h3>{project.title}</h3>
               <p>{project.description}</p>
