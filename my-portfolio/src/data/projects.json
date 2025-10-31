@@ -1,5 +1,36 @@
 [
   {
+    "id": "grand-library",
+    "title": "Grand Library",
+    "description": "This is my first next.js project where I learned the basics of Next.js and React.",
+    "fullDescription": "This project is a grand library application. In this exercise, I learned the basics of Next.js and React. The app allows users to view a collection of books, with detailed pages for each book. Theres also a wishlist feature and a lending system. There are also Staff features only for librarians to manage the book inventory, and user management.",
+    "image": "./images/libraryBooks.png",
+    "images": [
+      "./images/libraryLogin.png"
+      ,"./images/libraryBooks.png",
+      "./images/libraryBookDetail.png",
+      "./images/libraryUsers.png"
+    ],
+    "githubUrl": "https://github.com/ArnoVanSteenbergen03/niche-community",
+    "liveUrl": "#",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Prisma",
+      "Bcrypt",
+      "Tailwind CSS"
+    ],
+    "year": "2025",
+    "features": [
+      "Login as Student, Staff or as a Guest User",
+      "Library of Books with Detail Pages",
+      "Wishlist per User",
+      "Lending System",
+      "Staff Management Features",
+      "Ratings Feature"
+    ]
+  },
+  {
     "id": "niche-community",
     "title": "Niche Community",
     "description": "A test app to learn PHP and the BaseMVC model.",
