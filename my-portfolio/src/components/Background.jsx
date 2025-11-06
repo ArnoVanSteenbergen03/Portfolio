@@ -101,13 +101,15 @@ export default function Background() {
           float v = fbm(p + r);
 
           // palettes for dark vs light
-          vec3 darkA = vec3(0.05, 0.02, 0.15);
-          vec3 darkB = vec3(0.45, 0.08, 0.85);
-          vec3 darkC = vec3(0.02, 0.75, 0.85);
+          // Dark theme: deep purples and cyans
+          vec3 darkA = vec3(0.02, 0.01, 0.10);  // Very dark blue-purple
+          vec3 darkB = vec3(0.35, 0.05, 0.65);  // Deep purple
+          vec3 darkC = vec3(0.0, 0.55, 0.75);   // Cyan-blue
 
-          vec3 lightA = vec3(0.95, 0.95, 0.98);
-          vec3 lightB = vec3(0.85, 0.75, 0.95);
-          vec3 lightC = vec3(0.75, 0.9, 0.95);
+          // Light theme: soft pastels
+          vec3 lightA = vec3(0.94, 0.96, 0.99);  // Almost white with slight blue
+          vec3 lightB = vec3(0.88, 0.82, 0.96);  // Soft lavender
+          vec3 lightC = vec3(0.82, 0.94, 0.98);  // Soft cyan
 
           vec3 colA = mix(lightA, darkA, u_theme);
           vec3 colB = mix(lightB, darkB, u_theme);
@@ -142,12 +144,21 @@ export default function Background() {
     // Mouse-follow removed to reduce CPU/GPU load (was causing lag)
 
     function updateThemeUniform() {
-      const isDark =
-        document.documentElement.getAttribute("data-theme") === "dark";
-      material.uniforms.u_theme.value = isDark ? 1.0 : 0.0;
+      const theme = document.documentElement.getAttribute("data-theme");
+      const isDark = theme === "dark";
+      const newValue = isDark ? 1.0 : 0.0;
+      material.uniforms.u_theme.value = newValue;
+      console.log(`Theme changed to: ${theme}, u_theme: ${newValue}`);
+      // Force an immediate render to show the theme change
+      renderer.render(scene, camera);
     }
-    updateThemeUniform();
-    const themeObserver = new MutationObserver(updateThemeUniform);
+    
+    // Initial theme setup - wait a bit to ensure theme is set
+    setTimeout(updateThemeUniform, 0);
+    
+    const themeObserver = new MutationObserver(() => {
+      updateThemeUniform();
+    });
     themeObserver.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["data-theme"],
