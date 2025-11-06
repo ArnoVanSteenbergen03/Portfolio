@@ -1,5 +1,37 @@
 [
   {
+    "id": "avswebshop",
+    "title": "AVSWebshop",
+    "description": "This is my PHP project for my exam at Artevelde Hogeschool.",
+    "fullDescription": "This Laravel PHP project is a webshop that I developed for my exam at Artevelde Hogeschool. The webshop features product listings, a shopping cart, and an order management system. Users can browse products, add them to their cart, and proceed to checkout. The admin panel allows for managing products, categories, tags and orders.",
+    "image": "./images/webshop.png",
+    "images": [
+      "./images/webshop.png",
+      "./images/webshopList.png",
+      "./images/webshopdetail.png",
+      "./images/webshopcheckout.png"
+    ],
+    "githubUrl": "https://github.com/pgmgent-2526-datamanagement/webshop-ArnoVanSteenbergen03",
+    "liveUrl": "#",
+    "technologies": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "Blade Templating",
+      "Artisan",
+      "Tailwind CSS"
+    ],
+    "year": "2025",
+    "features": [
+      "Browse Webshop Products",
+      "Product Detail Pages",
+      "Shopping Cart Functionality",
+      "Order Management System",
+      "Admin Panel for Product Management",
+      "Responsive Design"
+    ]
+  },
+  {
     "id": "grand-library",
     "title": "Grand Library",
     "description": "This is my first next.js project where I learned the basics of Next.js and React.",
@@ -11,7 +43,7 @@
       "./images/libraryBookDetail.png",
       "./images/libraryUsers.png"
     ],
-    "githubUrl": "https://github.com/ArnoVanSteenbergen03/niche-community",
+    "githubUrl": "https://github.com/ArnoVanSteenbergen03/GrandLibrary",
     "liveUrl": "#",
     "technologies": [
       "Next.js",
