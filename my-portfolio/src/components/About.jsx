@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 const skillsData = [
   { name: "JavaScript", level: 90, icon: "🚀", category: "Frontend" },
   { name: "Node.js", level: 85, icon: "⚡", category: "Backend" },
-  { name: "Next.js", level: 50, icon: "🌐", category: "Frontend" },
+  { name: "Next.js", level: 70, icon: "🌐", category: "Frontend" },
   { name: "React", level: 75, icon: "⚛️", category: "Frontend" },
   { name: "CSS/SCSS", level: 85, icon: "🎨", category: "Frontend" },
   { name: "SQL", level: 75, icon: "🗄️", category: "Database" },
   { name: "HTML5", level: 95, icon: "📄", category: "Frontend" },
   { name: "Craft CMS", level: 65, icon: "🛠️", category: "CMS" },
-  { name: "TypeScript", level: 60, icon: "🔷", category: "Frontend" },
+  { name: "TypeScript", level: 70, icon: "🔷", category: "Frontend" },
   { name: "C#", level: 50, icon: "🎯", category: "Backend" },
-  { name: "PHP", level: 40, icon: "🐘", category: "Backend" },
-  { name: "Laravel", level: 10, icon: "🅻", category: "Backend" },
+  { name: "PHP", level: 60, icon: "🐘", category: "Backend" },
+  { name: "Laravel", level: 50, icon: "🅻", category: "Backend" },
 ];
 
 const timelineData = [
