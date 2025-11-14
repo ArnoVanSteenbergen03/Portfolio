@@ -99,14 +99,12 @@ const SplitText = ({
                 start,
                 once: true,
                 fastScrollEnd: true,
-                anticipatePin: 0.4,
               },
               onComplete: () => {
                 animationCompletedRef.current = true;
                 onLetterAnimationComplete?.();
               },
               willChange: "transform, opacity",
-              force3D: true,
             }
           );
           return tween;

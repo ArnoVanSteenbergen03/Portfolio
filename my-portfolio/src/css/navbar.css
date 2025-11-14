@@ -39,6 +39,7 @@
   position: relative;
   transition: color 0.2s;
   padding-bottom: 0.5rem;
+  will-change: color;
 }
 
 .nav__link::after {
@@ -50,6 +51,7 @@
   height: 2px;
   background: var(--primary);
   transition: width 0.3s ease;
+  will-change: width;
 }
 
 .nav__link:hover,

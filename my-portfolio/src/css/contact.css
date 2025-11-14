@@ -68,7 +68,8 @@
   font-size: 1rem;
   background: var(--bg-secondary);
   color: var(--text-primary);
-  transition: border-color 0.2s, background-color 0.2s;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  will-change: border-color, background-color;
 }
 
 .form__input:focus,
@@ -87,9 +88,10 @@
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 0.5rem;
   box-shadow: 0 4px 12px var(--shadow);
+  will-change: background-color, transform, box-shadow;
 }
 
 .form__button:hover {
