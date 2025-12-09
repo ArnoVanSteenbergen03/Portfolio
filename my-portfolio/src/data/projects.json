@@ -1,5 +1,32 @@
 [
   {
+    "id": "School360",
+    "title": "School360",
+    "description": "A mobile app for students and teachers to manage their attendances",
+    "fullDescription": "This was my first ever mobile app made with React Native and Expo Go. The app allows students to view their attendance records, while teachers can see everyones daily attendance data. The app connects to a Supabase backend for data storage and retrieval, and uses React-Query for efficient data fetching and state management. Form validation is handled using Yup to ensure data integrity. This was a group project that i made with 3 other students from Artveldehogeschool.",
+    "image": "./images/wip.png",
+    "images": [
+      "./images/wip.png"
+    ],
+    "githubUrl": "https://github.com/pgm-2526-programming-6/opdracht-1-hardware-school360",
+    "liveUrl": "#",
+    "technologies": [
+      "React Native",
+      "Expo Go",
+      "Supabase",
+      "Reactt-Query",
+      "Yup",
+      "Typescript"
+    ],
+    "year": "2025",
+    "features": [
+      "Location based Attendance Tracking",
+      "Role-based Access for Students and Teachers",
+      "Supabase Backend Integration",
+      "Form Validation with Yup"
+    ]
+  },
+  {
     "id": "avswebshop",
     "title": "AVSWebshop",
     "description": "This is my PHP project for my exam at Artevelde Hogeschool.",
