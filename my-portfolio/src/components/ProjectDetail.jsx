@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import ImageSlider from "./ImageSlider";
@@ -13,6 +13,10 @@ function ProjectDetail() {
   const { id } = useParams();
   const project = projectsData.find((p) => p.id === id);
   const [isSliderOpen, setIsSliderOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const openSlider = () => setIsSliderOpen(true);
   const closeSlider = () => setIsSliderOpen(false);

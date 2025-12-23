@@ -1,10 +1,11 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const skillsData = [
   { name: "JavaScript", level: 90, icon: "🚀", category: "Frontend" },
   { name: "Node.js", level: 85, icon: "⚡", category: "Backend" },
   { name: "Next.js", level: 70, icon: "🌐", category: "Frontend" },
-  {name: "React Native", level: 50, icon: "📱", category: "Mobile" },
+  { name: "React Native", level: 50, icon: "📱", category: "Mobile" },
   { name: "React", level: 75, icon: "⚛️", category: "Frontend" },
   { name: "CSS/SCSS", level: 85, icon: "🎨", category: "Frontend" },
   { name: "SQL", level: 75, icon: "🗄️", category: "Database" },
@@ -62,6 +63,9 @@ const interests = [
 ];
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="section" id="about">
       <div className="about">

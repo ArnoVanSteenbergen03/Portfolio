@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import projectsData from "../data/projects.json";
 
@@ -16,6 +17,10 @@ const getNormalizedPath = (path) => {
 };
 
 function Projects() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="section" id="projects">
       <div className="projects">

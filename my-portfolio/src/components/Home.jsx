@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SplitText from "./SplitText";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleAnimationComplete = () => {
     console.log("All letters have animated!");
   };
